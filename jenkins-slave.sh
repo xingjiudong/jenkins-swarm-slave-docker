@@ -1,7 +1,17 @@
 #!/bin/bash
+set -e
 
 # if `docker run` first argument start with `-` the user is passing jenkins swarm launcher arguments
 if [[ $# -lt 1 ]] || [[ "$1" == "-"* ]]; then
+  # Provide a way to customise this image
+  echo
+  for f in /docker-entrypoint-init.d/*; do
+    case "$f" in
+      *.sh)  echo "$0: running $f"; . "$f" ;;
+      *)     echo "$0: ignoring $f" ;;
+    esac
+    echo
+  done
 
   # jenkins swarm slave
   JAR=`ls -1 /usr/share/jenkins/swarm-client-*.jar | tail -n 1`

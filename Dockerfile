@@ -15,6 +15,8 @@ RUN curl --create-dirs -sSLo /usr/share/jenkins/swarm-client-$JENKINS_SWARM_VERS
 
 COPY jenkins-slave.sh /usr/local/bin/jenkins-slave.sh
 
+RUN mkdir /docker-entrypoint-init.d
+
 USER "${JENKINS_USER}"
 VOLUME "${JENKINS_HOME}"
 
