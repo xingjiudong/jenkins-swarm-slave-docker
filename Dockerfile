@@ -2,7 +2,7 @@ FROM openjdk:8-jdk-alpine
 
 MAINTAINER zsx <thinkernel@gmail.com>
 
-ENV JENKINS_SWARM_VERSION 3.9
+ENV JENKINS_SWARM_VERSION 3.14
 ENV JENKINS_SWARM_DOWNLOAD_SITE https://repo.jenkins-ci.org/releases/org/jenkins-ci/plugins/swarm-client
 ENV JENKINS_HOME /home/jenkins
 ENV JENKINS_USER jenkins
