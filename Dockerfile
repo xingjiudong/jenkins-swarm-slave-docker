@@ -1,4 +1,4 @@
-FROM openjdk:8-jdk
+FROM openfrontier/oracle-jdk:8u181-centos-7.4.1708
 
 MAINTAINER zsx <thinkernel@gmail.com>
 
