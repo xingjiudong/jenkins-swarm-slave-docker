@@ -1,5 +1,4 @@
 FROM openfrontier/oracle-jdk:8u181-centos-7.4.1708
-
 MAINTAINER zsx <thinkernel@gmail.com>
 
 ENV JENKINS_SWARM_VERSION 3.14
